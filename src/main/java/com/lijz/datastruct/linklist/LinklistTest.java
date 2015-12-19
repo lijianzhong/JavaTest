@@ -25,7 +25,7 @@ public class LinklistTest {
         //mylist.insertFirst(node3);
         mylist.insertLast(node3);
 
-        Node<Integer> node = mylist.getHead();
+        Node<Integer> node = mylist.reverse();
         while(node != null){
             System.out.println(node.getValue());
             node = node.getNext();

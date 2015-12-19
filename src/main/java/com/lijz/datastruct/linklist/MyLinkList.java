@@ -33,4 +33,25 @@ public class MyLinkList<E>{
     public Node<E> getHead() {
         return head;
     }
+
+    public Node<E> reverse(){
+
+        if(head == null || head.getNext() == null){
+            return null;
+        }
+
+        Node<E> pre = head.getNext();
+        Node<E> current = pre.getNext();
+        Node<E> next;
+
+        pre.setNext(null);
+        while(current != null){
+            next = current.getNext();
+            current.setNext(pre);
+            pre = current;
+            current = next;
+        }
+        head.setNext(pre);
+        return pre;
+    }
 }
