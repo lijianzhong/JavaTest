@@ -37,7 +37,7 @@ public class MyLinkList<E>{
     public Node<E> reverse(){
 
         if(head == null || head.getNext() == null){
-            return null;
+            return head;
         }
 
         Node<E> pre = head.getNext();
