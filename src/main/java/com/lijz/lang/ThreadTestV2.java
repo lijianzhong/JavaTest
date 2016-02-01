@@ -16,6 +16,7 @@ public class ThreadTestV2 {
                         System.out.println("Hello World!");
                     }
                 } catch (InterruptedException e) {
+                    System.out.println("interrupt");
                     Thread.currentThread().interrupt();
                 }
             }
